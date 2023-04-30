@@ -1,22 +1,5 @@
 const mongoose = require("mongoose");
 
-// {
-//     "_id": {
-//       "$oid": "644e5542d222e0a854e60ca6"
-//     },
-//     "name": "Bulbasaur",
-//     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-//     "type": "Grass/Poison",
-//     "abilities": [
-//       "Overgrow",
-//       "Chlorophyll"
-//     ],
-//     "level": 1,
-//     "evolution": [
-//       "2"
-//     ]
-//   }
-
 const schema = mongoose.Schema(
   {
     name: {
@@ -37,6 +20,12 @@ const schema = mongoose.Schema(
     evolution: {
         type: [String],
     },
+
+    owners: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "userPokemons",
+    },
+
   },
   {
     versionKey: false,

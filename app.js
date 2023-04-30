@@ -8,6 +8,7 @@ dotenv.config();
 // const swaggerUi = require('swagger-ui-express');
 // const swaggerDocument = require('./swagger.json');
 const { pokemonsRouter } = require('./src/routes/api/pokemons');
+const { userPokemonsRouter } = require('./src/routes/api/userPokemons');
 
 // const { friendsRouter } = require('./src/routes/api/friends');
 // const { newsRouter } = require('./src/routes/api/news');
@@ -25,15 +26,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/pokemons', pokemonsRouter);
-
+app.use('/api/userPokemons', userPokemonsRouter);
 // app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // app.use('/api/users', authRouter);
-// app.use('/api/friends', friendsRouter);
-// app.use('/api/news', newsRouter);
-
-// app.use('/api/notices', routerNotices);
-// app.use('/api/pets', petRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
