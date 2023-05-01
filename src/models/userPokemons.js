@@ -25,7 +25,7 @@ const schema = mongoose.Schema(
   }
 );
 
-const UserPokemons = mongoose.model("userPokemons", schema);
+const UserPokemons = mongoose.model("userpokemons", schema);
 
 module.exports = {
     UserPokemons,

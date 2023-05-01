@@ -1,12 +1,12 @@
 const { UserPokemons } = require("../models/userPokemons");
 
 const getUserPokemons = async (req, res, next) => {
-  const userPokemons = await UserPokemons.find();
-  if (!userPokemons) {
+  const userPokemon = await UserPokemons.find();
+  if (!userPokemon) {
     return res.status(400);
     }
 
-  return res.status(200).json(userPokemons);
+  return res.status(200).json(userPokemon);
 }
 
 const createNewUserPokemons = async (req, res, next) => {

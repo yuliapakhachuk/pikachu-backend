@@ -5,7 +5,7 @@ const { tryCatchWrapper } = require("../../helpers");
 const userPokemonsRouter = express.Router();
 
 userPokemonsRouter.get("/", tryCatchWrapper(getUserPokemons));
-userPokemonsRouter.post("/add", tryCatchWrapper(createNewUserPokemons));
+userPokemonsRouter.post("/", tryCatchWrapper(createNewUserPokemons));
 
 
 module.exports = {
