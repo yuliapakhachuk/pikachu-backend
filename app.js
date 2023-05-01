@@ -1,22 +1,11 @@
 const express = require('express');
-// const logger = require('morgan');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('./swagger.json');
 const { pokemonsRouter } = require('./src/routes/api/pokemons');
 const { userPokemonsRouter } = require('./src/routes/api/userPokemons');
-
-// const { friendsRouter } = require('./src/routes/api/friends');
-// const { newsRouter } = require('./src/routes/api/news');
-// const { routerNotices } = require('./src/routes/notices/notices');
-
-// const { authRouter } = require('./src/routes/api/user');
-
-// const { petRouter } = require('./src/routes/api/pets');
 
 const app = express();
 

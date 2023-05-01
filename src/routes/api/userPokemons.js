@@ -1,10 +1,12 @@
 const express = require("express");
-const { getUserPokemons } = require("../../controllers/userPokemons.controllers");
+const { getUserPokemons, createNewUserPokemons } = require("../../controllers/userPokemons.controllers");
 const { tryCatchWrapper } = require("../../helpers");
 
 const userPokemonsRouter = express.Router();
 
 userPokemonsRouter.get("/", tryCatchWrapper(getUserPokemons));
+userPokemonsRouter.post("/add", tryCatchWrapper(createNewUserPokemons));
+
 
 module.exports = {
     userPokemonsRouter,

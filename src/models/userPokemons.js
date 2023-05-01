@@ -9,13 +9,15 @@ const schema = mongoose.Schema(
     userId: {
       type: String,
     },
-    pokemons: {
-      type: [{
-        pokemonId: {type: String},
-        addedAt: {type: String},
-        evolvedAt: {type: String},
-    }],
-    },
+    pokemonId: {type: String},
+
+    // pokemons: {
+    //   type: [{
+    //     pokemonId: {type: String},
+    //     addedAt: {type: String},
+    //     evolvedAt: {type: String},
+    // }],
+    // },
   },
   {
     versionKey: false,

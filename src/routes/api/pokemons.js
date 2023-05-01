@@ -1,5 +1,5 @@
 const express = require("express");
-const { getPokemons } = require("../../controllers/pokemons.controllers");
+const { getPokemons } = require("../../controllers/user/pokemons.controllers");
 const { tryCatchWrapper } = require("../../helpers");
 
 const pokemonsRouter = express.Router();
