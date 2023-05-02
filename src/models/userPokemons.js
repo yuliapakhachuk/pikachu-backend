@@ -8,8 +8,12 @@ const schema = mongoose.Schema(
   {
     userId: {
       type: String,
+      required: true,
+      unique: true,
     },
-    pokemonId: {type: String},
+    pokemonId: {
+        type: String
+    },
 
     // pokemons: {
     //   type: [{
